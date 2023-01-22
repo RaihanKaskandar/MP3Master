@@ -35,10 +35,8 @@ def initFileExplorer():
 def browseFiles():                                                   
     filenames = filedialog.askopenfilenames(initialdir = "/mnt/c/Users/Raihan/Music",
                                           title = "Select MP3 File(s)",
-                                          filetypes = (("MP3 File",
-                                                        "*.mp3*"),
-                                                       ("all files",
-                                                        "*.*")))
+                                          filetypes = (("MP3 File", "*.mp3*"),
+                                                       ("all files", "*.*")))
 
     print("Opening file(s): ")
     for x in filenames:
