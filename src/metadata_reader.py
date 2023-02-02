@@ -1,16 +1,14 @@
 import eyed3
 
-def test(mp3_files):
-    audiofile = eyed3.load(mp3_files[0])
+def get_old_metadata(mp3_files):
+    old_metadata = []
+    audio_file = eyed3.load(mp3_files[0])
 
-    print("Before = " + audiofile.tag.artist)
+    old_metadata.append(audio_file.tag.artist)
+    old_metadata.append(audio_file.tag.album)
+    old_metadata.append(audio_file.tag.title)
 
-    audiofile.tag.artist = "MY dick"
-    audiofile.tag.save()
-
-    afterfile = eyed3.load(mp3_files[0])
-
-    print("After = " + afterfile.tag.artist)
-
-
-
+    # for x in old_metadata:
+    #     print(x)
+    
+    return old_metadata
