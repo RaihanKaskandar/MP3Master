@@ -1,18 +1,17 @@
 from .first_numbers import starts_with_numbers
-from .dir_remover import return_files_without_dir
+from .dir_remover import get_files_without_dir
+from .number_remover import get_removed_number_file
 
-__file_names = []
+def change_filenames(mp3_files):
+    files_without_dir = get_files_without_dir(mp3_files)
+    files_with_titles_only = []
 
-def parse_filename(mp3_files):
-    parsed_names = return_files_without_dir(mp3_files)
-    
-    for x in parsed_names:
+    for x in files_without_dir:
         if (starts_with_numbers(x)):
-            print(x + " start with number")
-        else: print(x + " doesnt start with numbers")
+            files_with_titles_only.append(get_removed_number_file(x))
+        else: files_with_titles_only.append(x)
     
-    return parsed_names
+    return files_with_titles_only
 
-def get_filenames(mp3_files):
-    __file_names = parse_filename
-    return __file_names
+def get_title_names(mp3_files):
+    return change_filenames(mp3_files)

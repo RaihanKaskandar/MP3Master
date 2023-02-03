@@ -1,2 +1,1 @@
-from .file_reader import get_filenames
-from .file_reader import parse_filename
+from .file_reader import get_title_names

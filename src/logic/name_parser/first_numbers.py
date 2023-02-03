@@ -19,8 +19,8 @@ def check_number(string_name):
 
     return True
 
-def starts_with_numbers(mp3_files):
-    splitted_name = mp3_files.split(" ", 1)
+def starts_with_numbers(file):
+    splitted_name = file.split(" ", 1)
     numbers_string = splitted_name[0]
 
     if (check_number(numbers_string) == True): 
