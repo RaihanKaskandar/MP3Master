@@ -1,6 +1,9 @@
 from file_explorer import get_mp3_files
 from open_eel import init_eel
 from metadata_reader import get_old_metadata
+from file_reader import parse_filename
+
+# from connect_api import test
                                 
 def main():
     print("Running main function!")
@@ -10,9 +13,11 @@ def main():
     print("Opening file(s): ")
     for x in mp3_files:
         print("     " + x + "\n")
-    
-    get_old_metadata(mp3_files)
-    
+
+    parse_filename(mp3_files)
+    # old_metadata = get_old_metadata(mp3_files)
+    # test(old_metadata)
+
     
 
 if __name__ == "__main__":

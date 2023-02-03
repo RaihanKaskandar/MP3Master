@@ -5,8 +5,8 @@ def get_old_metadata(mp3_files):
     audio_file = eyed3.load(mp3_files[0])
 
     old_metadata.append(audio_file.tag.artist)
-    old_metadata.append(audio_file.tag.album)
     old_metadata.append(audio_file.tag.title)
+    old_metadata.append(audio_file.tag.album)
 
     # for x in old_metadata:
     #     print(x)
