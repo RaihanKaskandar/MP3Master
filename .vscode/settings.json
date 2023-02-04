@@ -1,0 +1,8 @@
+{
+    "python.analysis.extraPaths": [
+        "./src/logic",
+        "./src/logic",
+        "./src/logic/name_editor",
+        "./src/logic/name_editor"
+    ]
+}
