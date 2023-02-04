@@ -1,5 +1,6 @@
 import eyed3
 
+
 def get_old_metadata(mp3_files):
     old_metadata = []
     audio_file = eyed3.load(mp3_files[0])
@@ -10,5 +11,5 @@ def get_old_metadata(mp3_files):
 
     # for x in old_metadata:
     #     print(x)
-    
+
     return old_metadata
