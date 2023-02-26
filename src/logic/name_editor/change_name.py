@@ -1,27 +1,15 @@
-from .artist_checker import contains_artist
+import os
 
 
-def get_artist():
-    return input("Which artist performs the song: ")
+def get_new_filenames(location, track_names):
+    concatenated_list = []
+    for x in range(len(location)):
+        concatenated_list.append(location[x] + "/" + track_names[x])
+    return concatenated_list
 
 
-def add_artist(file, artist):
-    file_with_artist = artist + " - " + file
-    return file_with_artist
+def set_filename(old_tracks, location, track_names):
+    new_tracks = get_new_filenames(location, track_names)
 
-
-def set_files_with_artist(file_titles):
-    artist = get_artist()
-    new_files = []
-    for x in file_titles:
-        if contains_artist(x, artist) == True:
-            new_files.append(x)
-        else:
-            new_files.append(add_artist(x, artist))
-
-    return new_files
-
-
-def get_files_with_artist(file_titles):
-    files_with_artist = set_files_with_artist(file_titles)
-    return files_with_artist
+    for x in range(len(new_tracks)):
+        os.rename(old_tracks[x], new_tracks[x])
