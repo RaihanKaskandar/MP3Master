@@ -1,5 +1,5 @@
 from file_explorer import get_mp3_files
-from filename_editor import rename_mp3_files
+from mp3_editor import rename_mp3_files
 
 # from open_eel import init_eel
 # from metadata_reader import get_old_metadata

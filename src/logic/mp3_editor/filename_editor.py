@@ -35,17 +35,17 @@ def rename_mp3_files():
     my_music_collection = MusicCollection()
 
     my_music_collection.path = get_mp3_files()
-    print_path(my_music_collection.path)
+    # print_path(my_music_collection.path)
 
     my_music_collection.location_path = get_dir(my_music_collection.path)
-    print_location_path(my_music_collection.location_path)
+    # print_location_path(my_music_collection.location_path)
 
     my_music_collection.track_titles = get_title_names(my_music_collection.path)
 
     my_music_collection.final_titles = get_files_with_artist(
         my_music_collection.track_titles
     )
-    print_final_titles(my_music_collection.final_titles)
+    # print_final_titles(my_music_collection.final_titles)
 
     set_filename(
         my_music_collection.path,
