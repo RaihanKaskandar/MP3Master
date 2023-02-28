@@ -1,4 +1,3 @@
-from file_explorer import get_mp3_files
 from mp3_editor import rename_mp3_files
 
 # from open_eel import init_eel
