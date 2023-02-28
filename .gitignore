@@ -1,0 +1,16 @@
+# Ignore compiled Python files
+*.pyc
+__pycache__/
+mp3_editor/__pycache__/
+name_editor/__pycache__/
+name_parser/__pycache__/
+
+# Ignore VS Code files
+.vscode/
+.settings/
+*.code-workspace
+
+# Ignore other files
+*.log
+*.swp
+.DS_Store
